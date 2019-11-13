@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MyHystory | Página Inicial</title>
+  <link rel="icon" href="img/logo.ico">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/vegas/dist/vegas.min.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><img src="img/logo.png"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cadastro</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobre</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <content>
+    <div id="vegasSliderInner">
+      <h2></h2>
+    </div>
+  </content>
+
+  <footer class="page-footer text-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 py-3">
+            <!-- Facebook -->
+            <a class="fb-ic">
+              <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic">
+              <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic">
+              <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+            </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-copyright text-center py-3">© 2019</div>
+  </footer>
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/vegas/dist/vegas.min.js"></script>
+  <script src="node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+  <script>
+
+    $("#fullScreenSlider, body").vegas({
+      slides: [
+        { src: "/img/carousel/slide3.jpg", text: "Liberte sua criatividade para o mundo" },
+        { src: "/img/carousel/slide1.jpg", text: "Poemas, Textos, Músicas" },
+        { src: "/img/carousel/slide2.jpg", text: "Todas as suas ideias em um só lugar" }
+      ],
+
+      overlay: true,
+
+      walk: function (index, slideSettings) {
+        $('#vegasSliderInner > h2').html(slideSettings.text);
+      }
+    });
+  </script>
+  <style>
+    header {
+      position: fixed;
+      width: 100% !important;
+    }
+
+    footer {
+      background: rgb(255, 255, 255);
+    }
+
+    #vegasSliderInner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      widht: 100vw;
+      background: rgba(0, 0, 0, 0.5)
+    }
+
+    #vegasSliderInner h2 {
+      color: white;
+      font-size: 48px;
+    }
+  </style>
+</body>
+
+</html>

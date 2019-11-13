@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header .navbar-brand img{
+    width: 50%;
+    height: 50%;
+}
+.navbar-light .navbar-nav .nav-link{
+    color: black;
+    font-weight: bold;
+}
+
+/* .carousel-item img{
+    width: 100%;
+    height: 600px;
+} */
